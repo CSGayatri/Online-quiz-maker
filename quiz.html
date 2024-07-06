@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizcs.css">
+    <title>Quiz app</title>
+</head>
+<body>
+    <div class="app">
+        <h1>Simple Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div class="answer-buttons" id="answer-buttons">
+                <!-- Answer buttons will be dynamically added here -->
+            </div>
+            <button id="next-btn">Next</button>
+            <div id="score-display" class="score-display" style="display: none;"></div> <!-- Score display section -->
+            <button id="reset-btn" style="display: none;">Reset Quiz</button> <!-- Reset button -->
+        </div>
+        <button id="create-quiz-btn">Create Quiz</button> <!-- Button to create new quizzes -->
+    </div>
+
+    <!-- Modal for creating new quiz questions -->
+    <div id="create-quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Quiz</h2>
+            <input type="text" id="new-question" placeholder="Enter question">
+            <input type="text" id="new-answer1" placeholder="Answer 1">
+            <input type="text" id="new-answer2" placeholder="Answer 2">
+            <input type="text" id="new-answer3" placeholder="Answer 3">
+            <input type="text" id="new-answer4" placeholder="Answer 4">
+            <select id="correct-answer">
+                <option value="1">Answer 1</option>
+                <option value="2">Answer 2</option>
+                <option value="3">Answer 3</option>
+                <option value="4">Answer 4</option>
+            </select>
+            <button id="save-question-btn">Save Question</button>
+        </div>
+    </div>
+
+    <script src="quizjs.js"></script>
+</body>
+</html>
